@@ -3,7 +3,11 @@
 
 .site-header{
     padding: 5rem 0;
-    @include m.bgImage("img/header.jpg", v.$secundarioOpacity);
+    background-image: linear-gradient(v.$secundarioOpacity 0%, $secundarioOpacity 100% ),
+    url('img/header.jg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top  center;
 
     .logo{
         max-width: 20rem;
