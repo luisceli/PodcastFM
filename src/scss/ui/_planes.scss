@@ -53,12 +53,12 @@
             }
         }
         &.inicio{
-            @include m.iconBg('../../../build/img/icono_inicio.svg');
+            @include m.iconBg('img/icono_inicio.svg');
         }
         &.negocio{
             order: -1;
             background-color: v.$primario;
-            @include m.iconBg('../../../build/img/icono_negocio.svg');
+            @include m.iconBg('img/icono_negocio.svg');
         @include m.tablet { 
             order: unset;
             margin-top: -5rem;
@@ -70,7 +70,7 @@
         }
         }
         &.pro{
-            @include m.iconBg('../../../build/img/icono_pro.svg');
+            @include m.iconBg('img/icono_pro.svg');
         }
 
     }
