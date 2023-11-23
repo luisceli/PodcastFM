@@ -1,0 +1,29 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+
+
+.alcance{
+ background-color: v.$primario;
+
+ .alcance-grid{
+    @include m.tablet { 
+        @include m.grid(5, 4rem);
+        align-items: center;
+    }
+ }
+ .alcance_contenido{
+   grid-column: 1/4;
+   h2{
+    @include m.headingBorder(v.$secundario,v.$blanco)
+ }
+ }
+ .imagen{
+   grid-column: 4/6;
+    transition: transform .3s;
+   &:hover{
+    transform: rotate(4deg) scale(1.2);
+   }
+ }
+
+}
