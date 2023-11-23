@@ -37,6 +37,10 @@ function versionWebp() {
         .pipe( webp( opciones ) )
         .pipe( dest('build/img') )
 }
+function copiarHTML() {
+    return src('src/html/*html')
+        .pipe(dest('build/'));
+  }
 function versionAvif() {
     const opciones = {
         quality: 50
@@ -57,4 +61,4 @@ exports.dev = dev;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.default = series( imagenes, versionWebp, versionAvif, css, dev  );
+exports.default = series( imagenes, versionWebp, versionAvif, css, copiarHTML  );
